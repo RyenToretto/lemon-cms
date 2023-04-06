@@ -1,0 +1,58 @@
+@import '../common/index.less';
+
+.el-menu {
+  border-right-width: 0;
+  background: none;
+}
+.el-menu-item,
+.el-submenu__title {
+  font-weight: 600;
+}
+.el-submenu {
+  .el-menu {
+    box-sizing: border-box;
+    padding-left: 8px;
+    background: #f8faff;
+  }
+  .el-menu-item {
+    box-sizing: border-box;
+    min-width: 170px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #666;
+    &.is-active {
+      color: @link-color;
+    }
+  }
+}
+.el-menu-item-group__title {
+  color: #bbb;
+  &::before {
+    content: '';
+    border-left: 2px solid #ccc;
+    margin-right: 10px;
+    margin-left: -12px;
+  }
+}
+.aside-submenu.waiting {
+  > .el-submenu__title {
+    .warnPoint(#ff4d4f, 16px, unset, 6px);
+  }
+  .aside-badge {
+    box-sizing: border-box;
+    margin-left: 2px;
+    padding: 0 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px #fff;
+    background: #ff4d4f;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

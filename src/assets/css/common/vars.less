@@ -1,0 +1,77 @@
+/**
+ * Variables
+  1).增加一定数值的颜色饱和度：saturate()
+  2).降低一定数值的颜色饱和度：desaturate()
+  3).增加一定数值的颜色亮度：lighten()
+  4).降低一定数值的颜色亮度：darken()
+  5).降低颜色的透明度（或增加不透明度），令其更不透明：fadein()
+  6).增加颜色的透明度（或降低不透明的），令其更透明：fadeout()
+  7).给颜色（包括不透明的颜色）设定一定数值的透明度：fade()
+  8).任意方向旋转颜色的色相角度（hue angle）:spin()
+ */
+@font-family-regular: PingFangSC-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+@font-family-medium: PingFangSC-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+@font-family-semibold: PingFangSC-Semibold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+@font-family-din: DIN-Bold, PingFangSC-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+
+// ====colors
+// @primary-color: #409eff;
+@primary-color: #3376de;
+// todo:主题色待定
+@yellow: #fe880b;
+@green: #67c23a;
+@red: #ff4040;
+@color-warning: @yellow;
+@color-warning-light: #fffbe6;
+// ====bg
+@bg-lightest: #f8f8fa; // f9faff
+@bg-darkest: #333;
+@menu-highlight-bg: rgba(255, 255, 255, 0.1);
+@submenu-open-bg: rgba(219, 206, 255, 0.11);
+
+// ====fonts
+@font-size-base: 14px;
+@font-size-small: 12px;
+@font-color-dark: #262626;
+@font-color-base: #404040;
+@font-color-light: #595959; // rgba(0,0,0,0.65)
+@font-color-lighter: #aaa;
+@font-family: @font-family-regular;
+@link-color: darken(@primary-color, 5%);
+
+// ====border
+@border-color-base: #ebeef5;
+@border-color-light: #f0f0f0;
+@input-border-color: #e7effb;
+// ====layout
+@side-bar-width: 196px;
+@side-bar-fold-width: 64px;
+@wrapper-width: 1280px;
+@wrapper-width-max: 1920px;
+
+@gap-xs: 8px;
+@gap-s: 16px;
+@gap: 24px;
+@gap-l: 32px;
+@gap-xl: 40px;
+
+@header-height: 56px;
+@footer-height: 40px;
+
+// ====table
+@table-header-border: 0px solid #e8e8e8;
+@sub-table-background: #fcfcfc;
+@sub-table-header-color: #bfc5d2;
+@table-resize-proxy-border: 1px dashed @primary-color;
+
+// ====form
+@input-border-color: #dcdfe6;
+@form-item-line-height: 40px; // 同button默认高度
+@form-item-margin-bottom: 22px;
+// ====other
+@box-shadow-normal: 0 3px 20px 0 rgba(0, 0, 0, 0.3);
+@publish-icon-color: #5cb6ff;

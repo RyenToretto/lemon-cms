@@ -1,0 +1,24 @@
+@import '../common/index.less';
+
+.do-pagination {
+  margin: @gap 0;
+  text-align: center;
+  // 卡片页脚的翻页
+  .do-card .ft > & {
+    margin-top: (@gap / 2);
+    margin-bottom: 0;
+  }
+}
+.el-pagination.is-background {
+  .btn-next,
+  .btn-prev,
+  .el-pager li {
+    min-width: 32px;
+    background: #fff;
+    border: 1px solid @input-border-color;
+  }
+}
+.el-pagination__jump {
+  margin-left: (@gap / 2);
+  margin-right: (@gap / 2);
+}

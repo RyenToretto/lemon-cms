@@ -1,0 +1,232 @@
+@import '../common/index.less';
+
+.plus-ico {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+.tooltips-line {
+  padding: 12px 0;
+  color: #999;
+  font-size: 12px;
+  &.with-border {
+    border-bottom: 1px solid #d3d3d3;
+  }
+}
+.do-radio {
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  font-size: 14px;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .do-radio-box {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 50%;
+    border: 1px solid #dcdfe6;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border linear 0.3s, background-color linear 0.3s;
+    &:hover {
+      border-color: #409eff;
+    }
+  }
+  .el-icon-loading {
+    position: absolute;
+    bottom: 0;
+    left: 130%;
+    opacity: 0;
+    transition: opacity linear 0.3s;
+  }
+  &.loading {
+    .el-icon-loading {
+      opacity: 1;
+    }
+  }
+  &.active {
+    .do-radio-box {
+      border-width: 5px;
+      border-color: #409eff;
+    }
+  }
+  &.disabled {
+    .do-radio-box {
+      border-color: #e4e7ed;
+      background-color: #f5f7fa;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.el-tooltip__popper {
+  max-width: 50vw;
+}
+
+.tooltips-tag-popper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .tooltips-tag {
+    box-sizing: border-box;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.append-box {
+  position: relative;
+  .append-head-ctl {
+    box-sizing: border-box;
+    padding: 8px 0;
+    width: 100px;
+    height: 56px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+// 查询框
+.search-wrap {
+  @ctrl-width: 100px;
+  margin-bottom: @gap;
+  & > .bd {
+    padding: @gap;
+    position: relative;
+  }
+  .el-form {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    &.with-btn {
+      padding-right: @ctrl-width;
+    }
+  }
+  .el-form--inline {
+    .el-form-item {
+      margin: 10px 10px 10px 0;
+    }
+    .el-form-item__content {
+      // width: 230px;
+      // width: 186px;
+      // & > .el-select {
+      //   display: block;
+      // }
+    }
+  }
+  .ctrl {
+    // background: #f8f8f8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: (@ctrl-width + @gap);
+    padding: @gap (@gap / 2) @gap;
+    // margin: -@gap -@gap -@gap 0;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid #f0f0f0;
+    .el-button {
+      margin: 4px;
+      // & + .el-button {
+      //   margin-left: 0;
+      //   margin-top: 10px;
+      // }
+    }
+    &.align-right {
+      text-align: right;
+    }
+    & + .el-form {
+      padding-right: @ctrl-width;
+    }
+  }
+  .el-date-editor--daterange.el-input__inner {
+    width: 230px;
+    // .el-range__icon,
+    // .el-range__close-icon {
+    //   display: none;
+    // }
+  }
+}
+
+.el-image-viewer__close {
+  color: #fff;
+  padding: 5px;
+  width: auto;
+  height: auto;
+  background: rgba(0, 0, 0, 0.7);
+  ::v-deep .el-icon-circle-close {
+    &::before {
+      content: '\e6db';
+    }
+  }
+}
+
+// 确认框
+.el-popconfirm__main {
+  margin-bottom: 10px;
+}
+
+// @media screen and (min-width: 1440px) {
+//   .search-wrap {
+//     .el-form--inline {
+//       .el-form-item__content {
+//         width: 230px;
+//       }
+//     }
+//   }
+// }
+// @media screen and (min-width: 1920px) {
+//   .search-wrap {
+//     .el-form--inline {
+//       .el-form-item__content {
+//         width: 195px;
+//       }
+//     }
+//   }
+// }
+
+// 顶部标题 容器
+.top-title-wrapper {
+  margin-top: -16px;
+  padding: 8px 0;
+  min-height: 40px;
+  & > .main-title {
+    // float: left;
+    display: inline-block;
+    margin: 0 @gap 0 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+}
+
+.show-normal-checkbox {
+  color: #f00;
+  .el-checkbox__input,
+  .el-checkbox__input.is-disabled {
+    cursor: pointer;
+    .el-checkbox__inner {
+      background-color: #fff;
+      border-color: #dcdfe6;
+      cursor: pointer;
+      &::after {
+        border-color: #fff;
+        cursor: pointer;
+      }
+    }
+    &.is-checked {
+      .el-checkbox__inner {
+        background-color: #409eff;
+        border-color: #409eff;
+      }
+    }
+  }
+}

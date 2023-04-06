@@ -1,0 +1,8 @@
+export const SET_PAGE_SIZE = 'set_page_size'
+export const SET_TOKEN = 'set_token'
+export const SET_USER_NAME = 'set_user_name'
+export const SET_ROLE = 'set_role'
+export const SET_PERMISSION = 'set_permission'
+export const SET_PERMISSION_ROUTES = 'set_permission_routes'
+export const SET_CURRENT_PATHS = 'set_current_paths'
+export const TOOGLE_ASIDE = 'toogle_aside'

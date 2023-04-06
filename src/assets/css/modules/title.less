@@ -1,0 +1,136 @@
+@import '../common/index.less';
+
+.do-info-title {
+  padding-left: 12px;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 80%;
+    border-radius: 4px;
+    background-color: #409eff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+  }
+  &.do-tab-title {
+    .do-tab-item {
+      margin-right: 10px;
+      color: rgba(100, 100, 100, 0.4);
+      cursor: pointer;
+      &.active {
+        color: #666;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  > h5 {
+    font-size: 16px;
+  }
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding: @gap-s;
+}
+// 大标题
+.main-title {
+  box-sizing: border-box;
+  padding: 0 @gap-s;
+  height: @header-height;
+  border-bottom: 1px solid var(--color-border);
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  color: @font-color-light;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & > .right {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    height: @header-height;
+    font-size: 14px;
+  }
+  > .title-right > h2,
+  > h2 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: @font-color-light;
+  }
+  > .title-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .right-item {
+      margin-left: 8px;
+    }
+  }
+  .el-dialog__header {
+    box-sizing: border-box;
+    line-height: 24px;
+  }
+  > h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: @font-color-light;
+  }
+  > .page-crumb {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    > .el-breadcrumb__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &.prev-page-title {
+        > .el-breadcrumb__inner {
+          > h2 {
+            font-size: 24px;
+            line-height: 1.42857143;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            color: #303133;
+            cursor: pointer;
+          }
+        }
+      }
+      > .el-breadcrumb__inner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        > h1 {
+          font-size: 24px;
+          line-height: 1.42857143;
+          font-weight: 400;
+          color: #606266;
+          cursor: text;
+        }
+        .tips {
+          margin-left: 6px;
+          margin-bottom: 6px;
+        }
+      }
+      > .el-breadcrumb__separator {
+        font-size: 24px;
+      }
+    }
+  }
+}

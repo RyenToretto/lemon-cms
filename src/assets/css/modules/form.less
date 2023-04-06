@@ -1,0 +1,79 @@
+@import '../common/index.less';
+
+// 表单间距
+.el-form-item {
+  margin-bottom: @form-item-margin-bottom;
+}
+.el-form-item__label::after {
+  content: ':';
+}
+// 表单行高
+.el-form-item__content,
+.el-form-item__label {
+  line-height: @form-item-line-height;
+}
+// 表单label
+.el-form-item__label {
+  // font-size: 12px;
+  // font-weight: 600;
+  color: @font-color-base;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+// 单选按钮
+.el-radio {
+  color: @font-color-light;
+  font-weight: 400;
+  &.is-bordered {
+    height: 32px;
+    padding-top: 8px;
+  }
+}
+// 错误信息
+.el-form-item__error {
+  position: static;
+  margin-bottom: -8px;
+}
+// 校验成功
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-textarea__inner {
+  border-color: @input-border-color;
+}
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: @primary-color;
+}
+// datePicker
+.el-range-input {
+  background: inherit;
+}
+// .el-date-editor {
+//   .el-range-separator,
+//   .el-range__close-icon,
+//   .el-range__icon {
+//     line-height: 24px;
+//   }
+// }
+// 下拉列表
+.select-special-options {
+  // background: #f5f7fa;
+  border-bottom: 1px solid #e4e7ed;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+.select-special-options__item {
+  padding: 0 20px;
+  line-height: 34px;
+}
+.el-checkbox-button.is-checked .el-checkbox-button__inner {
+  background-color: #e5eeff;
+  color: @primary-color;
+  border-color: @primary-color;
+  // box-shadow: -1px 0 0 0 red;
+}
+.el-form {
+  .el-popover > & {
+    margin-bottom: -18px;
+  }
+}

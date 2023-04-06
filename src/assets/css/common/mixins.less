@@ -1,0 +1,40 @@
+/**
+ * Helper mixins
+*/
+
+@import './vars.less';
+
+.boxShadow() {
+  box-shadow: @box-shadow-normal;
+}
+.baseCard() {
+  background: #fff;
+  // box-shadow: @box-shadow-normal;
+  border-radius: 4px;
+}
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+.warnPoint(@color, @top, @left, @right) {
+  position: relative;
+  &::after {
+    display: block;
+    content: '';
+    box-sizing: border-box;
+    width: 6px;
+    min-width: 6px;
+    height: 6px;
+    background: @color;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px #fff;
+    position: absolute;
+    top: @top;
+    left: @left;
+    right: @right;
+    z-index: auto;
+    animation: pulse 2s 2s infinite;
+  }
+}

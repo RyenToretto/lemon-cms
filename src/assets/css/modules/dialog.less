@@ -1,0 +1,106 @@
+.inventory-table__dialog {
+  .el-dialog__body {
+    padding: 0 10px 1px;
+    border-top: 1px solid #ebeef5;
+  }
+}
+.el-dialog__header + .el-dialog__body {
+  padding-top: 10px;
+}
+
+.do-dialog-wrapper {
+  display: inline-block;
+  &.do-disabled {
+    .do-dialog-ctl {
+      .el-button {
+        color: #bcbec2;
+        background-color: #f4f4f5;
+        border-color: #e9e9eb;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.do-dialog-box {
+  .el-dialog__header {
+    .el-dialog__title {
+      display: block;
+      box-sizing: border-box;
+      padding-right: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .el-dialog__body {
+    padding: 5px;
+    .el-row {
+      > .el-col:first-child {
+        padding-right: 0 !important;
+      }
+    }
+    .el-form-item {
+      box-sizing: border-box;
+    }
+    .do-dialog-content-box {
+      padding: 0 20px;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+      .do-form-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          box-sizing: border-box;
+          height: 100%;
+          border-right: 1px dashed var(--base-divider-light-1);
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .do-form-left {
+          box-sizing: border-box;
+          width: 50%;
+        }
+        .do-form-right {
+          box-sizing: border-box;
+          width: 50%;
+        }
+      }
+    }
+    .do-dialog-footer {
+      padding: 16px;
+      margin-top: 12px;
+      box-sizing: border-box;
+      min-height: 48px;
+      background: #f0f0f0;
+      position: relative;
+      .do-dialog-bottom-btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &.hide {
+    .el-dialog {
+      background-color: transparent;
+      box-shadow: none;
+      .el-dialog__header {
+        display: none;
+      }
+      .el-dialog__body {
+        .do-dialog-footer {
+          display: none;
+        }
+      }
+    }
+  }
+}

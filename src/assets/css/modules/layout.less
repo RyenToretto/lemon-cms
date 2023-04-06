@@ -1,0 +1,84 @@
+@import '../common/index.less';
+
+.__inner {
+  min-width: @wrapper-width;
+  max-width: @wrapper-width-max;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.main-container {
+  // width: @wrapper-width;
+  // margin: 0 auto;
+
+  & > .__inner {
+    padding: @gap @gap @footer-height @side-bar-width + @gap;
+    min-height: 100vh;
+    .hide-menu & {
+      padding-left: @gap;
+    }
+  }
+  .envtips {
+    box-sizing: border-box;
+    padding: 0 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px #fff;
+    background: #cc5e7a;
+    color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.2;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4px;
+    right: 24px;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+.base-footer {
+  // background: #f8f8f8;
+  height: @footer-height;
+  margin-top: -@footer-height;
+  .inner {
+    padding: 0 @gap 0 @side-bar-width + @gap;
+    line-height: @footer-height;
+    .hide-menu & {
+      padding-left: @gap;
+    }
+  }
+  .copyright {
+    text-align: center;
+    color: @font-color-lighter;
+  }
+}
+// 侧边栏账户菜单弹层
+.account-popper {
+  // padding: 0;
+  .el-dropdown-menu__item {
+    line-height: 40px;
+    // font-size: 16px;
+    // font-weight: 600;
+    i {
+      font-size: 24px;
+      margin-right: @gap-s;
+      vertical-align: middle;
+    }
+    &.active {
+      color: @primary-color;
+    }
+  }
+}
+.menu-popper {
+  .el-dropdown-menu__item.active {
+    color: @primary-color;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .__inner {
+    max-width: 100%;
+  }
+}

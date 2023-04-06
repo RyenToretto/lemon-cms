@@ -1,0 +1,6 @@
+export * from './modules/area'
+export * from './modules/exportExcel'
+export * from './modules/login'
+export * from './modules/region'
+export * from './modules/uploads'
+export * from './modules/version'
